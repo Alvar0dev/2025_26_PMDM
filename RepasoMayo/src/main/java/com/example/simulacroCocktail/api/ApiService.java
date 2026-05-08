@@ -1,0 +1,12 @@
+package com.example.simulacroCocktail.api;
+
+import retrofit2.Call;
+import retrofit2.http.GET;
+
+public interface ApiService {
+    @GET("filter.php?a=Alcoholic")
+    Call<CocktailResponse> getElementos();
+
+    @GET("filter.php?a=Non_Alcoholic")
+    Call<CocktailResponse> getNotAlcoholic();
+}
